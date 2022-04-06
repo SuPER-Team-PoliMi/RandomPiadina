@@ -1,16 +1,17 @@
-from functions.randomPiadinaSelector import randomPiadinaSelector
-from functions.printTitle import printTitle
+from src.randomPiadinaSelector import randomPiadinaSelector
+from src.console.printTitle import cleanAndPrintTitle
 
-printTitle()
+cleanAndPrintTitle()
 
-if 0:
+if 1:
   selection = input("Select mode\n[1] Random piadina generator\n[2] Vote piadina\n[3] Add piadina to database\n[4] Stats\n-> ")
   print()
   randomPiadinaSelector(selection)
+  print()
+  print("Enjoy")
+  print()
+else:
+  randomPiadinaSelector()
 
-randomPiadinaSelector()
-
-print()
-print("Enjoy")
 
 
