@@ -1,25 +1,18 @@
 import os
+
+from src.globalVars.title import title
+
 from src.console.clearConsole import clearConsole
+from src.random.randomGenerator import generateRandomInt
 
-def printTitle():
-  print(
-    r"""
-    _____            _   _ _____   ____  __  __
-   |  __ \     /\   | \ | |  __ \ / __ \|  \/  |
-   | |__) |   /  \  |  \| | |  | | |  | | \  / |
-   |  _  /   / /\ \ | . ` | |  | | |  | | |\/| |
-   | | \ \  / ____ \| |\  | |__| | |__| | |  | |
-   |_|__\_\/_/_   \_\_| \_|_____/_\____/|_|  |_
-   |  __ \_   _|   /\   |  __ \_   _| \ | |   /\
-   | |__) || |    /  \  | |  | || | |  \| |  /  \
-   |  ___/ | |   / /\ \ | |  | || | | . ` | / /\ \
-   | |    _| |_ / ____ \| |__| || |_| |\  |/ ____ \
-   |_|   |_____/_/    \_\_____/_____|_| \_/_/    \_
-  """
-  )
 
-def cleanAndPrintTitle():
+def printTitle(titleIndex):
+  print(title[titleIndex])
+
+def cleanAndPrintTitle(titleIndex = 4):
+  titleIndex = generateRandomInt(0,len(title),1)
   clearConsole()
-  printTitle()
+  # printTitle(titleIndex)
+  printTitle(generateRandomInt(0,len(title),1))
   
 
