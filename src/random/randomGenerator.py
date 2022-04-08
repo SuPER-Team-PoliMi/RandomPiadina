@@ -7,7 +7,7 @@ def generateRandomInt(low, high, size=1, seedInt=69):
   return int(randIngredient)
 
 def generateUniqueRandomIngredient(listGroupIngredients, low, high, size=1):
-  randIngredient = 0
+  randIngredient = -1
   equalFlag = True
   while equalFlag:
     try:
